@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0d3b2e">
+<title>سنّي — لقّى حرفيّك في تونس</title>
+<meta name="description" content="لقّى حرفي (سباك، كهربائي، تكييف...) أو لقّى حرفاء جدد.">
+<meta property="og:title" content="سنّي — لقّى حرفيّك في تونس">
+<meta property="og:description" content="سباكة · كهرباء · تكييف · دهن · ألومنيوم — اتصل بالحرفي مباشرة على واتساب.">
+<meta property="og:type" content="website">
+<style>
+:root{--bg:#fafafa;--card:#fff;--line:#e4e4e4;--txt:#111;--sub:#777;--ok:#1a7f37;--brand:#0d3b2e;--brand2:#14694f}
+@media(prefers-color-scheme:dark){:root{--bg:#111;--card:#1c1c1c;--line:#333;--txt:#eee;--sub:#999;--ok:#3fb950;--brand2:#1a8563}}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+body{font-family:-apple-system,"Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--txt);max-width:480px;margin:auto;padding-bottom:80px}
+header{position:sticky;top:0;background:var(--brand);color:#fff;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;z-index:9}
+header b{font-size:19px}
+.badge{background:#fff;color:var(--brand);border:0;border-radius:999px;padding:4px 12px;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+main{padding:14px}
+.fld{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--txt);font:inherit;margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sub{color:var(--sub);font-size:12.5px;line-height:19px}
+.c{text-align:center}
+.btn{display:block;border:0;border-radius:10px;padding:11px;font:inherit;font-size:14px;cursor:pointer;text-align:center;text-decoration:none;flex:1;color:var(--txt)}
+.pri{background:var(--brand2);color:#fff}
+.sec{background:transparent;border:1px solid var(--line)}
+.wa{background:#25D366;color:#fff;font-weight:700}
+.full{width:100%;margin-top:4px}
+.ok{background:rgba(26,127,55,.12);color:var(--ok);border:1px solid rgba(26,127,55,.3);border-radius:6px;padding:2px 8px;font-size:11px}
+.chip{display:inline-block;background:rgba(128,128,128,.15);border-radius:6px;padding:2px 8px;font-size:12px;margin-inline-start:4px}
+.hero{background:linear-gradient(160deg,var(--brand),var(--brand2));color:#fff;border-radius:16px;padding:22px 16px;margin-bottom:12px;text-align:center}
+.hero h1{font-size:25px;margin-bottom:6px}
+.hero p{font-size:14px;line-height:22px;opacity:.92}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+h3{font-size:15px;margin-bottom:10px}
+.step{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;font-size:13.5px;line-height:20px}
+.step .n{width:24px;height:24px;flex:none;border-radius:999px;background:var(--brand2);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+nav{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:auto;background:var(--card);border-top:1px solid var(--line);display:flex}
+nav button{flex:1;padding:12px 4px;border:none;background:none;color:var(--sub);font:inherit;font-size:12.5px;cursor:pointer}
+nav button.on{color:var(--txt);font-weight:700;border-top:2px solid var(--brand2)}
+#toast{position:fixed;bottom:70px;left:0;right:0;margin:auto;max-width:320px;background:var(--txt);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:13px;text-align:center;opacity:0;transition:.25s;pointer-events:none}
+footer{text-align:center;color:var(--sub);font-size:12px;padding:14px 0 6px}
+</style>
+</head>
+<body>
+<header><b>سنّي</b><button class="badge" onclick="share()">شارك التطبيق</button></header>
+<main>
+
+<section id="v-home">
+  <div class="hero">
+    <h1>لقّى حرفيّك في تونس</h1>
+    <p>سباكة · كهرباء · تكييف · دهن · ألومنيوم<br>اتصل بالحرفي مباشرة على واتساب، والأجرة تتفق عليها قبل ما يبدأ.</p>
+  </div>
+  <div class="g2">
+    <button class="btn pri" onclick="tab('find')">أحتاج حرفياً</button>
+    <button class="btn sec" onclick="tab('pro')">أنا حرفي</button>
+  </div>
+  <div class="card">
+    <h3>للحرفاء</h3>
+    <div class="step"><span class="n">1</span><div>اختار التخصص والولاية وشوف الحرفيين</div></div>
+    <div class="step"><span class="n">2</span><div>كلّم الحرفي على واتساب واتفقو على الأجرة</div></div>
+    <div class="step"><span class="n">3</span><div>ما لقيتش؟ انشر طلبك والحرفيون يتصلو بيك</div></div>
+  </div>
+  <div class="card">
+    <h3>للحرفيين</h3>
+    <div class="step"><span class="n">1</span><div>سجّل معلوماتك، ونراجعو ملفك ونتصلو بيك</div></div>
+    <div class="step"><span class="n">2</span><div>بعد القبول تظهر للحرفاء وتتسلّم رمز دخول</div></div>
+    <div class="step"><span class="n">3</span><div>شوف طلبات الحرفاء الجداد واتصل بيهم مباشرة</div></div>
+  </div>
+  <a class="btn wa full" id="waBtn" href="#">تواصل معنا على واتساب</a>
+  <footer>سنّي © 2026 — خدمة تونسية</footer>
+</section>
+
+<section id="v-find" hidden>
+  <select class="fld" id="fSpec" onchange="loadTechs()"></select>
+  <select class="fld" id="fCity" onchange="loadTechs()"></select>
+  <div id="techs"></div>
+</section>
+
+<section id="v-req" hidden>
+  <div class="card">
+    <h3>انشر طلبك</h3>
+    <p class="sub" style="margin-bottom:10px">رقمك يشوفو الحرفيون المقبولون فقط.</p>
+    <input class="fld" id="rName" placeholder="الاسم" maxlength="60">
+    <input class="fld" id="rPhone" placeholder="رقم الهاتف (8 أرقام)" inputmode="tel">
+    <select class="fld" id="rSpec"></select>
+    <select class="fld" id="rCity"></select>
+    <input class="fld" id="rDesc" placeholder="وصف المشكل" maxlength="500">
+    <button class="btn pri full" onclick="sendReq()">أرسل الطلب</button>
+  </div>
+</section>
+
+<section id="v-pro" hidden>
+  <div id="proAuth">
+    <div class="card">
+      <h3>دخول الحرفي</h3>
+      <input class="fld" id="lPhone" placeholder="رقم هاتفك" inputmode="tel">
+      <input class="fld" id="lCode" placeholder="رمز الدخول" autocapitalize="off">
+      <button class="btn pri full" onclick="proLogin()">دخول</button>
+    </div>
+    <div class="card">
+      <h3>سجّل كحرفي</h3>
+      <p class="sub" style="margin-bottom:10px">بالتسجيل توافق على ظهور اسمك وتخصصك ورقمك للحرفاء بعد قبول ملفك.</p>
+      <input class="fld" id="gName" placeholder="الاسم" maxlength="60">
+      <input class="fld" id="gPhone" placeholder="رقم الهاتف (8 أرقام)" inputmode="tel">
+      <select class="fld" id="gSpec"></select>
+      <select class="fld" id="gCity"></select>
+      <input class="fld" id="gBio" placeholder="نبذة عنك وسنوات الخبرة" maxlength="300">
+      <button class="btn pri full" onclick="register()">أرسل ملفي للمراجعة</button>
+    </div>
+  </div>
+  <div id="proBoard" hidden>
+    <div class="row" style="margin-bottom:10px"><b>طلبات الحرفاء</b><button class="badge" style="background:var(--card);color:var(--txt);border:1px solid var(--line)" onclick="proLogout()">خروج</button></div>
+    <select class="fld" id="qSpec" onchange="renderReqs()"></select>
+    <select class="fld" id="qCity" onchange="renderReqs()"></select>
+    <div id="reqs"></div>
+  </div>
+</section>
+
+</main>
+<nav>
+  <button id="t-home" class="on" onclick="tab('home')">الرئيسية</button>
+  <button id="t-find" onclick="tab('find')">لقّى حرفي</button>
+  <button id="t-req" onclick="tab('req')">طلب</button>
+  <button id="t-pro" onclick="tab('pro')">للحرفيين</button>
+</nav>
+<div id="toast"></div>
+
+<script src="config.js"></script>
+<script>
+const CFG=window.CFG||{};
+const SPECS=["سباكة","كهرباء","تكييف","دهن","ألومنيوم","بناء","نجارة","ميكانيك","أخرى"];
+const CITIES=["تونس","أريانة","بن عروس","منوبة","نابل","بنزرت","زغوان","باجة","جندوبة","الكاف","سليانة","سوسة","المنستير","المهدية","صفاقس","القيروان","القصرين","سيدي بوزيد","قابس","مدنين","تطاوين","قبلي","توزر","قفصة"];
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const H={apikey:CFG.SB_KEY||"","Content-Type":"application/json"};
+if((CFG.SB_KEY||"").indexOf("eyJ")===0)H.Authorization="Bearer "+CFG.SB_KEY;
+
+function toast(m){const t=$("toast");t.textContent=m;t.style.opacity=1;setTimeout(()=>t.style.opacity=0,2400)}
+async function api(path,opt){
+  opt=opt||{};
+  const r=await fetch(CFG.SB_URL+"/rest/v1/"+path,Object.assign({},opt,{headers:Object.assign({},H,opt.headers||{})}));
+  if(!r.ok){let m="";try{m=(await r.json()).message||""}catch(e){}const e=new Error(m||String(r.status));e.status=r.status;throw e}
+  try{return await r.json()}catch(e){return null}
+}
+function normPhone(p){
+  let d=(p||"").replace(/\D/g,"").replace(/^00/,"");
+  if(d.length===11&&d.indexOf("216")===0)d=d.slice(3);
+  return /^\d{8}$/.test(d)?d:null;
+}
+const wa=(phone,text)=>"https://wa.me/216"+phone+"?text="+encodeURIComponent(text);
+
+function fill(){
+  const o=(a,all)=>(all?'<option value="">'+all+'</option>':'')+a.map(x=>'<option>'+x+'</option>').join('');
+  ["rSpec","gSpec"].forEach(i=>$(i).innerHTML=o(SPECS));
+  ["fSpec","qSpec"].forEach(i=>$(i).innerHTML=o(SPECS,"كل التخصصات"));
+  ["rCity","gCity"].forEach(i=>$(i).innerHTML=o(CITIES));
+  ["fCity","qCity"].forEach(i=>$(i).innerHTML=o(CITIES,"كل الولايات"));
+  $("waBtn").href="https://wa.me/"+(CFG.WA||"")+"?text="+encodeURIComponent("السلام، عندي سؤال على سنّي.");
+}
+function tab(v){
+  ["home","find","req","pro"].forEach(x=>{$("v-"+x).hidden=x!==v;$("t-"+x).classList.toggle("on",x===v)});
+  window.scrollTo(0,0);
+  if(v==="find")loadTechs();
+  if(v==="pro")proInit();
+}
+async function share(){
+  const d={title:"سنّي",text:"لقّى حرفيّك في تونس — سنّي",url:location.href};
+  try{if(navigator.share)await navigator.share(d);else{await navigator.clipboard.writeText(d.url);toast("تم نسخ الرابط")}}catch(e){}
+}
+
+async function loadTechs(){
+  const box=$("techs");
+  box.innerHTML='<div class="card sub c">جاري التحميل...</div>';
+  let q="technicians_public?select=name,spec,city,phone,bio&order=created_at.desc&limit=60";
+  if($("fSpec").value)q+="&spec=eq."+encodeURIComponent($("fSpec").value);
+  if($("fCity").value)q+="&city=eq."+encodeURIComponent($("fCity").value);
+  try{
+    const r=await api(q);
+    box.innerHTML=(r&&r.length)?r.map(t=>
+      '<div class="card"><div class="row"><b>'+esc(t.name)+'</b><span class="ok">موثّق</span></div>'+
+      '<div style="margin:6px 0">'+esc(t.spec)+' <span class="chip">'+esc(t.city)+'</span></div>'+
+      (t.bio?'<div class="sub" style="margin-bottom:10px">'+esc(t.bio)+'</div>':'')+
+      '<div class="row"><a class="btn wa" href="'+esc(wa(t.phone,"السلام "+t.name+"، لقيتك في تطبيق سنّي وعندي مشكل في "+t.spec+". نجم نحكي معاك؟"))+'">واتساب</a>'+
+      '<a class="btn sec" href="tel:+216'+esc(t.phone)+'">اتصال</a></div></div>'
+    ).join(""):'<div class="card sub c">ما فما حتى حرفي في هذا الاختيار حالياً.<br>انشر طلبك من تبويب "طلب" والحرفيون يتصلو بيك.</div>';
+  }catch(e){box.innerHTML='<div class="card sub c">صار مشكل في التحميل، عاود بعد شوية.</div>'}
+}
+
+async function sendReq(){
+  const name=$("rName").value.trim(),phone=normPhone($("rPhone").value),desc=$("rDesc").value.trim();
+  if(name.length<2||!phone||desc.length<5)return toast("أكمل الاسم ورقم من 8 أرقام ووصف المشكل");
+  try{
+    await api("requests",{method:"POST",headers:{Prefer:"return=minimal"},body:JSON.stringify({client_name:name,phone:phone,spec:$("rSpec").value,city:$("rCity").value,description:desc})});
+    ["rName","rPhone","rDesc"].forEach(i=>$(i).value="");
+    toast("وصل طلبك، الحرفيون باش يتصلو بيك");
+  }catch(e){toast("صار مشكل، عاود")}
+}
+
+async function register(){
+  const name=$("gName").value.trim(),phone=normPhone($("gPhone").value);
+  if(name.length<2||!phone)return toast("أدخل الاسم ورقم من 8 أرقام");
+  try{
+    await api("technicians",{method:"POST",headers:{Prefer:"return=minimal"},body:JSON.stringify({name:name,phone:phone,spec:$("gSpec").value,city:$("gCity").value,bio:$("gBio").value.trim()||null})});
+    ["gName","gPhone","gBio"].forEach(i=>$(i).value="");
+    toast("وصل ملفك، باش نتصلو بيك للمراجعة");
+  }catch(e){toast(e.status===409?"هذا الرقم مسجّل من قبل":"صار مشكل، عاود")}
+}
+
+let REQS=[];
+const K="sanni_pro";
+function getCreds(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(e){return null}}
+function saveCreds(p,c){try{localStorage.setItem(K,JSON.stringify({p:p,c:c}))}catch(e){}}
+function clearCreds(){try{localStorage.removeItem(K)}catch(e){}}
+function showAuth(){$("proAuth").hidden=false;$("proBoard").hidden=true}
+function showBoard(){$("proAuth").hidden=true;$("proBoard").hidden=false;renderReqs()}
+async function proLoad(p,c,silent){
+  try{
+    REQS=await api("rpc/list_requests",{method:"POST",body:JSON.stringify({p_phone:p,p_code:c})})||[];
+    saveCreds(p,c);showBoard();
+  }catch(e){
+    if(e.status){clearCreds();if(!silent)toast("الرقم أو الرمز غير صحيح، أو ملفك لم يُقبل بعد")}
+    else if(!silent)toast("لا يوجد اتصال");
+    showAuth();
+  }
+}
+function proInit(){const s=getCreds();if(s&&$("proBoard").hidden)proLoad(s.p,s.c,true)}
+function proLogin(){
+  const p=normPhone($("lPhone").value),c=$("lCode").value.trim().toLowerCase();
+  if(!p||!c)return toast("أدخل الهاتف والرمز");
+  proLoad(p,c,false);
+}
+function proLogout(){clearCreds();REQS=[];showAuth()}
+function renderReqs(){
+  const s=$("qSpec").value,c=$("qCity").value;
+  const list=REQS.filter(r=>(!s||r.spec===s)&&(!c||r.city===c));
+  $("reqs").innerHTML=list.map(r=>
+    '<div class="card"><div class="row"><b>'+esc(r.client_name)+'</b><span class="sub">'+esc(String(r.created_at).slice(0,10))+'</span></div>'+
+    '<div style="margin:6px 0">'+esc(r.spec)+' <span class="chip">'+esc(r.city)+'</span></div>'+
+    '<div class="sub" style="margin-bottom:10px">'+esc(r.description)+'</div>'+
+    '<div class="row"><a class="btn wa" href="'+esc(wa(r.phone,"السلام، شفت طلبك في سنّي ("+r.spec+" - "+r.city+"). نجم نعاونك؟"))+'">واتساب</a>'+
+    '<a class="btn sec" href="tel:+216'+esc(r.phone)+'">اتصال</a></div></div>'
+  ).join("")||'<div class="card sub c">لا طلبات حالياً</div>';
+}
+fill();
+</script>
+</body>
+</html>
