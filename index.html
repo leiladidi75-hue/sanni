@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0d3b2e">
-<title>سنّي — لقّى حرفيّك في تونس</title>
-<meta name="description" content="لقّى حرفي (سباك، كهربائي، تكييف...) أو لقّى حرفاء جدد.">
-<meta property="og:title" content="سنّي — لقّى حرفيّك في تونس">
-<meta property="og:description" content="سباكة · كهرباء · تكييف · دهن · ألومنيوم — اتصل بالحرفي مباشرة على واتساب.">
+<title>سوق الحرفيين التونسي — لقّى حرفيّك في تونس</title>
+<meta name="description" content="منصة تونسية تربطك مباشرة بحرفيين موثّقين: سباكة، كهرباء، تكييف، دهن، ألومنيوم. تواصل واتساب مباشر بلا وسيط.">
+<meta property="og:title" content="سوق الحرفيين التونسي">
+<meta property="og:description" content="سباكة · كهرباء · تكييف · دهن · ألومنيوم — فنيون موثّقون، تواصل مباشر على واتساب.">
 <meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%F0%9F%94%A7</text></svg>">
 <style>
 :root{--bg:#fafafa;--card:#fff;--line:#e4e4e4;--txt:#111;--sub:#777;--ok:#1a7f37;--brand:#0d3b2e;--brand2:#14694f}
 @media(prefers-color-scheme:dark){:root{--bg:#111;--card:#1c1c1c;--line:#333;--txt:#eee;--sub:#999;--ok:#3fb950;--brand2:#1a8563}}
@@ -32,12 +33,15 @@ main{padding:14px}
 .ok{background:rgba(26,127,55,.12);color:var(--ok);border:1px solid rgba(26,127,55,.3);border-radius:6px;padding:2px 8px;font-size:11px}
 .chip{display:inline-block;background:rgba(128,128,128,.15);border-radius:6px;padding:2px 8px;font-size:12px;margin-inline-start:4px}
 .hero{background:linear-gradient(160deg,var(--brand),var(--brand2));color:#fff;border-radius:16px;padding:22px 16px;margin-bottom:12px;text-align:center}
-.hero h1{font-size:25px;margin-bottom:6px}
+.hero h1{font-size:22px;margin-bottom:6px;line-height:30px}
 .hero p{font-size:14px;line-height:22px;opacity:.92}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
 h3{font-size:15px;margin-bottom:10px}
 .step{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;font-size:13.5px;line-height:20px}
 .step .n{width:24px;height:24px;flex:none;border-radius:999px;background:var(--brand2);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.trust .card{margin:0;display:flex;gap:8px;align-items:center;font-size:12.5px;line-height:18px}
+.trust .ic{width:24px;height:24px;flex:none;border-radius:999px;background:rgba(26,127,55,.15);color:var(--ok);display:grid;place-items:center;font-size:13px;font-weight:700}
 nav{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:auto;background:var(--card);border-top:1px solid var(--line);display:flex}
 nav button{flex:1;padding:12px 4px;border:none;background:none;color:var(--sub);font:inherit;font-size:12.5px;cursor:pointer}
 nav button.on{color:var(--txt);font-weight:700;border-top:2px solid var(--brand2)}
@@ -46,13 +50,23 @@ footer{text-align:center;color:var(--sub);font-size:12px;padding:14px 0 6px}
 </style>
 </head>
 <body>
-<header><b>سنّي</b><button class="badge" onclick="share()">شارك التطبيق</button></header>
+<header><b>السوق</b><button class="badge" onclick="share()">شارك التطبيق</button></header>
 <main>
 
 <section id="v-home">
   <div class="hero">
-    <h1>لقّى حرفيّك في تونس</h1>
-    <p>سباكة · كهرباء · تكييف · دهن · ألومنيوم<br>اتصل بالحرفي مباشرة على واتساب، والأجرة تتفق عليها قبل ما يبدأ.</p>
+    <h1>سوق الحرفيين التونسي</h1>
+    <p>سباكة · كهرباء · تكييف · دهن · ألومنيوم<br>منصة تونسية تربطك مباشرة بحرفيين تم التحقق منهم، بلا وسيط وبلا عمولة خفية.</p>
+  </div>
+  <div class="trust">
+    <div class="card"><span class="ic">✓</span>فنيون تمّت مراجعتهم يدوياً قبل الظهور</div>
+    <div class="card"><span class="ic">✓</span>تواصل مباشر على واتساب، بلا وسيط</div>
+    <div class="card"><span class="ic">✓</span>الأجرة تُتّفق عليها قبل ما يبدأ العمل</div>
+    <div class="card"><span class="ic">✓</span>الخدمة مجانية حالياً 100%</div>
+  </div>
+  <div class="card">
+    <h3>شنو هو السوق؟</h3>
+    <p class="sub">سوق الحرفيين التونسي منصة بسيطة تربط بين الحرفاء اللي يحتاجو خدمة والحرفيين المتوفرين في نفس المنطقة. ما فماش تطبيق تحمّلو — تفتح الرابط وتخدم مباشرة من المتصفح، على فيسبوك أو واتساب أو تيكتوك.</p>
   </div>
   <div class="g2">
     <button class="btn pri" onclick="tab('find')">أحتاج حرفياً</button>
@@ -68,10 +82,10 @@ footer{text-align:center;color:var(--sub);font-size:12px;padding:14px 0 6px}
     <h3>للحرفيين</h3>
     <div class="step"><span class="n">1</span><div>سجّل معلوماتك، ونراجعو ملفك ونتصلو بيك</div></div>
     <div class="step"><span class="n">2</span><div>بعد القبول تظهر للحرفاء وتتسلّم رمز دخول</div></div>
-    <div class="step"><span class="n">3</span><div>شوف طلبات الحرفاء الجداد واتصل بيهم مباشرة</div></div>
+    <div class="step" style="margin-bottom:0"><span class="n">3</span><div>شوف طلبات الحرفاء الجداد واتصل بيهم مباشرة</div></div>
   </div>
   <a class="btn wa full" id="waBtn" href="#">تواصل معنا على واتساب</a>
-  <footer>سنّي © 2026 — خدمة تونسية</footer>
+  <footer>سوق الحرفيين التونسي © 2026</footer>
 </section>
 
 <section id="v-find" hidden>
@@ -159,7 +173,7 @@ function fill(){
   ["fSpec","qSpec"].forEach(i=>$(i).innerHTML=o(SPECS,"كل التخصصات"));
   ["rCity","gCity"].forEach(i=>$(i).innerHTML=o(CITIES));
   ["fCity","qCity"].forEach(i=>$(i).innerHTML=o(CITIES,"كل الولايات"));
-  $("waBtn").href="https://wa.me/"+(CFG.WA||"")+"?text="+encodeURIComponent("السلام، عندي سؤال على سنّي.");
+  $("waBtn").href="https://wa.me/"+(CFG.WA||"")+"?text="+encodeURIComponent("السلام، عندي سؤال على سوق الحرفيين.");
 }
 function tab(v){
   ["home","find","req","pro"].forEach(x=>{$("v-"+x).hidden=x!==v;$("t-"+x).classList.toggle("on",x===v)});
@@ -168,7 +182,7 @@ function tab(v){
   if(v==="pro")proInit();
 }
 async function share(){
-  const d={title:"سنّي",text:"لقّى حرفيّك في تونس — سنّي",url:location.href};
+  const d={title:"سوق الحرفيين التونسي",text:"لقّى حرفيّك في تونس — سوق الحرفيين التونسي",url:location.href};
   try{if(navigator.share)await navigator.share(d);else{await navigator.clipboard.writeText(d.url);toast("تم نسخ الرابط")}}catch(e){}
 }
 
@@ -184,7 +198,7 @@ async function loadTechs(){
       '<div class="card"><div class="row"><b>'+esc(t.name)+'</b><span class="ok">موثّق</span></div>'+
       '<div style="margin:6px 0">'+esc(t.spec)+' <span class="chip">'+esc(t.city)+'</span></div>'+
       (t.bio?'<div class="sub" style="margin-bottom:10px">'+esc(t.bio)+'</div>':'')+
-      '<div class="row"><a class="btn wa" href="'+esc(wa(t.phone,"السلام "+t.name+"، لقيتك في تطبيق سنّي وعندي مشكل في "+t.spec+". نجم نحكي معاك؟"))+'">واتساب</a>'+
+      '<div class="row"><a class="btn wa" href="'+esc(wa(t.phone,"السلام "+t.name+"، لقيتك في سوق الحرفيين التونسي وعندي مشكل في "+t.spec+". نجم نحكي معاك؟"))+'">واتساب</a>'+
       '<a class="btn sec" href="tel:+216'+esc(t.phone)+'">اتصال</a></div></div>'
     ).join(""):'<div class="card sub c">ما فما حتى حرفي في هذا الاختيار حالياً.<br>انشر طلبك من تبويب "طلب" والحرفيون يتصلو بيك.</div>';
   }catch(e){box.innerHTML='<div class="card sub c">صار مشكل في التحميل، عاود بعد شوية.</div>'}
@@ -211,7 +225,7 @@ async function register(){
 }
 
 let REQS=[];
-const K="sanni_pro";
+const K="craft_pro";
 function getCreds(){try{return JSON.parse(localStorage.getItem(K)||"null")}catch(e){return null}}
 function saveCreds(p,c){try{localStorage.setItem(K,JSON.stringify({p:p,c:c}))}catch(e){}}
 function clearCreds(){try{localStorage.removeItem(K)}catch(e){}}
@@ -241,7 +255,7 @@ function renderReqs(){
     '<div class="card"><div class="row"><b>'+esc(r.client_name)+'</b><span class="sub">'+esc(String(r.created_at).slice(0,10))+'</span></div>'+
     '<div style="margin:6px 0">'+esc(r.spec)+' <span class="chip">'+esc(r.city)+'</span></div>'+
     '<div class="sub" style="margin-bottom:10px">'+esc(r.description)+'</div>'+
-    '<div class="row"><a class="btn wa" href="'+esc(wa(r.phone,"السلام، شفت طلبك في سنّي ("+r.spec+" - "+r.city+"). نجم نعاونك؟"))+'">واتساب</a>'+
+    '<div class="row"><a class="btn wa" href="'+esc(wa(r.phone,"السلام، شفت طلبك في سوق الحرفيين التونسي ("+r.spec+" - "+r.city+"). نجم نعاونك؟"))+'">واتساب</a>'+
     '<a class="btn sec" href="tel:+216'+esc(r.phone)+'">اتصال</a></div></div>'
   ).join("")||'<div class="card sub c">لا طلبات حالياً</div>';
 }
