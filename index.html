@@ -46,9 +46,9 @@ main{padding:14px}
 .full{width:100%;margin-top:4px}
 .chip{display:inline-block;background:transparent;border:1px solid var(--line);color:var(--sub);border-radius:999px;padding:2px 9px;font-size:11.5px;margin-inline-start:4px}
 
-/* stamp = the one bold, memorable element: a rotated ink-stamp mark */
 .stamp{display:inline-flex;align-items:center;gap:4px;border:2px solid var(--amber);color:var(--amber);border-radius:999px;padding:3px 11px;font-size:11.5px;font-weight:800;transform:rotate(-5deg)}
 .stamp.on{background:var(--amber);color:var(--forest);border-color:var(--amber)}
+.stamp.founder{background:var(--forest);color:#fff;border-color:var(--forest)}
 .dot{width:22px;height:22px;flex:none;border-radius:999px;border:2px solid var(--amber);color:var(--amber);display:grid;place-items:center;font-size:11px;font-weight:800}
 
 .hero{background:var(--forest);color:#fff;border-radius:10px;padding:24px 18px 20px;margin-bottom:12px}
@@ -224,18 +224,18 @@ async function share(){
 async function loadTechs(){
   const box=$("techs");
   box.innerHTML='<div class="card sub c">جاري التحميل...</div>';
-  let q="technicians_public?select=name,spec,city,phone,bio,featured&order=featured.desc,created_at.desc&limit=60";
+  let q="technicians_public?select=name,spec,city,phone,bio,featured,founder&order=founder.desc,featured.desc,created_at.desc&limit=60";
   if($("fSpec").value)q+="&spec=eq."+encodeURIComponent($("fSpec").value);
   if($("fCity").value)q+="&city=eq."+encodeURIComponent($("fCity").value);
   try{
     const r=await api(q);
     box.innerHTML=(r&&r.length)?'<div class="card">'+r.map(t=>
-      '<div class="stub"><div class="row"><b>'+esc(t.name)+'</b>'+(t.featured?'<span class="stamp on">⭐ مميّز</span>':'<span class="stamp">موثّق</span>')+'</div>'+
+      '<div class="stub"><div class="row"><b>'+esc(t.name)+'</b>'+(t.founder?'<span class="stamp founder">🏅 من المؤسسين</span>':(t.featured?'<span class="stamp on">⭐ مميّز</span>':'<span class="stamp">موثّق</span>'))+'</div>'+
       '<div style="margin:6px 0">'+esc(t.spec)+' <span class="chip">'+esc(t.city)+'</span></div>'+
       (t.bio?'<div class="sub" style="margin-bottom:10px">'+esc(t.bio)+'</div>':'')+
       '<div class="row"><a class="btn wa" href="'+esc(wa(t.phone,"السلام "+t.name+"، لقيتك في سوق الحرفيين التونسي وعندي مشكل في "+t.spec+". نجم نحكي معاك؟"))+'">واتساب</a>'+
       '<a class="btn sec" href="tel:+216'+esc(t.phone)+'">اتصال</a></div></div>'
-    ).join("")+'</div>':'<div class="card sub c">ما فما حتى حرفي في هذا الاختيار حالياً.<br>انشر طلبك من تبويب "طلب" والحرفيون يتصلو بيك.</div>';
+    ).join("")+'</div>':"<div class='card c'><p class='sub' style='margin-bottom:12px'>ما فما حرفي في هذا الاختيار حالياً.<br>انشر طلبك والحرفيون يتصلو بيك مباشرة.</p><button class='btn pri full' onclick='tab(\"req\")'>انشر طلبك الآن</button></div>";
   }catch(e){box.innerHTML='<div class="card sub c">صار مشكل في التحميل، عاود بعد شوية.</div>'}
 }
 
